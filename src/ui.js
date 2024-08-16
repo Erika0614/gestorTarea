@@ -10,12 +10,12 @@ export const renderTasks = () => {
         const li = document.createElement("li");
         li.setAttribute("data-id", task.id);
 
-        if(task.completed == true) {
+        if(task.completed === true) {
             li.classList.add("completed");
         }
 
-        li.innerHTML.HTML = `
-            ${task.texte}
+        li.innerHTML = `
+            ${task.text}
             <button class="delete"> Borrar </button>
             <button class="toggle"> ${task.completed === true ? "Regresar" : "Completado"} </button>
         `;
